@@ -69,16 +69,6 @@ app.delete('/remove', (req, res) => {
     usersRef.child(req.body.user_id).remove();
 });
 
-
-
-
-
-
-
-app.delete('/remove', (req, res) => {
-    usersRef.child(req.body.user_id).remove();
-});
-
 usersRef.on('child_added', snapshot => {
      console.log('New data has been added to the database !');
 });

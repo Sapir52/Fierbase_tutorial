@@ -26,16 +26,6 @@ admin.initializeApp({
 });*/
 
 
-
-
-
-// var serviceAccount = require("the .json file path");
-
-// admin.initializeApp({
-//   credential: admin.credential.cert(serviceAccount),
-//   databaseURL: "your database url"
-// });
-
 admin.initializeApp({
     credential: admin.credential.applicationDefault(),
     databaseURL:  "https://project-name-b6f0e-default-rtdb.firebaseio.com"
@@ -80,7 +70,7 @@ app.delete('/remove', (req, res) => {
 });
 
 
-/*
+
 
 
 
@@ -89,37 +79,37 @@ app.delete('/remove', (req, res) => {
     usersRef.child(req.body.user_id).remove();
 });
 
-// usersRef.on('child_added', snapshot => {
-//     console.log('New data has been added to the database !');
-// });
+usersRef.on('child_added', snapshot => {
+     console.log('New data has been added to the database !');
+});
 
-// usersRef.on('child_changed', snapshot => {
-//     console.log('Data has been changed !');
-// });
+usersRef.on('child_changed', snapshot => {
+     console.log('Data has been changed !');
+});
 
-// usersRef.on('child_removed', snapshot => {
-//     console.log('Data has been removed !');
-// });
+usersRef.on('child_removed', snapshot => {
+     console.log('Data has been removed !');
+});
 
-// usersRef.on('value', snapshot => {
-//     console.log('An event occured on the database !');
-// });
+usersRef.on('value', snapshot => {
+     console.log('An event occured on the database !');
+});
 
-// usersRef.on('child_changed', snapshot => {
-//     console.log(snapshot.val());
-// });
+usersRef.on('child_changed', snapshot => {
+     console.log(snapshot.val());
+});
 
-// usersRef.orderByKey().limitToLast(2).on('value', snapshot => {
-//     console.log(snapshot.val());
-// });
+usersRef.orderByKey().limitToLast(2).on('value', snapshot => {
+     console.log(snapshot.val());
+});
 
-// usersRef.orderByChild('last_name').startAt('J').on('value', snapshot => {
-//     console.log(snapshot.val());
-// });
+usersRef.orderByChild('last_name').startAt('J').on('value', snapshot => {
+     console.log(snapshot.val());
+});
 
 usersRef.orderByValue().limitToLast(2).on('value', snapshot => {
     console.log(snapshot.val());
-});*/
+});
 
 app.listen(port, () => {
     console.log(`App is listening to port ${port}`);

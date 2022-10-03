@@ -15,20 +15,9 @@ const app = express();
 const port = 3000;
 const admin = require('firebase-admin');
 
-
-
-/*
-var serviceAccount = require("C:/Users/ספיר/Desktop/firebase_realtime_database/project-name-b6f0e-firebase-adminsdk-x1b68-c96881e994.json");
-
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://project-name-b6f0e-default-rtdb.firebaseio.com"
-});*/
-
-
 admin.initializeApp({
     credential: admin.credential.applicationDefault(),
-    databaseURL:  "https://project-name-b6f0e-default-rtdb.firebaseio.com"
+    databaseURL:   "********************************"
   });
 
 

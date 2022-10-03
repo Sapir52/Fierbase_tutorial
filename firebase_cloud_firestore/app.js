@@ -17,7 +17,7 @@ const admin = require('firebase-admin');
 
   admin.initializeApp({
     credential: admin.credential.applicationDefault(),
-    databaseURL:  "https://project-name-b6f0e-default-rtdb.firebaseio.com"
+    databaseURL:  "********************************"
   });
   
 const database = admin.firestore();
